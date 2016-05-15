@@ -1,0 +1,19 @@
+www.pipi.cn                   	122.228.68.134, 122.228.68.133
+groups.pipi.cn                	122.228.68.133
+homepage.pipi.cn              	122.228.68.132
+provincia.pipi.cn             	122.228.68.132
+admin.pipi.cn                 	60.191.110.154
+cp.pipi.cn                    	122.225.105.120
+union.pipi.cn                 	61.130.11.199
+mail.pipi.cn                  	42.156.140.99
+bbs.pipi.cn                   	61.130.11.216
+shop.pipi.cn                  	115.236.57.184
+home.pipi.cn                  	122.225.68.12
+v.pipi.cn                     	122.228.201.76
+video.pipi.cn                 	115.236.57.184
+go.pipi.cn                    	60.191.93.182
+monitor.pipi.cn               	211.161.224.241
+img.pipi.cn                   	122.228.68.146, 122.228.68.144, 122.228.68.145
+live.pipi.cn                  	60.190.219.119
+dl.pipi.cn                    	122.228.68.150, 122.228.68.148, 122.228.68.149, 122.228.68.151
+kb.pipi.cn                    	61.153.183.56

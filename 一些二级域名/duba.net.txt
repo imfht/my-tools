@@ -1,0 +1,47 @@
+www.duba.net                  	121.251.255.237
+my.duba.net                   	61.129.73.239
+homepage3.duba.net            	125.39.136.78, 115.182.195.29
+homepage1.duba.net            	115.182.195.29, 125.39.136.78
+info.duba.net                 	119.147.146.155
+news.duba.net                 	114.112.68.197
+up.duba.net                   	114.112.68.164, 114.112.68.163
+union.duba.net                	61.129.73.190
+bbs.duba.net                  	114.112.93.21
+tuan.duba.net                 	114.112.93.100
+ns1.duba.net                  	61.136.58.99
+v.duba.net                    	101.4.138.61
+hd.duba.net                   	114.112.93.21
+vip.duba.net                  	114.112.93.71
+online.duba.net               	121.14.11.155
+m.duba.net                    	114.112.93.53
+mx6.duba.net                  	219.234.86.115
+linux.duba.net                	218.60.108.135, 218.24.17.40, 218.58.209.106, 123.130.123.6, 183.95.152.2, 119.188.138.24, 119.188.138.29, 36.250.90.5, 58.20.132.56
+bo.duba.net                   	119.147.146.155
+download.duba.net             	58.20.132.56, 119.188.138.29, 36.250.90.5, 218.58.209.106, 218.60.108.135, 123.130.123.6, 119.188.138.24, 183.95.152.2, 218.24.17.40
+pass.duba.net                 	114.112.93.71
+sj.duba.net                   	127.0.0.1
+cv.duba.net                   	183.60.153.98
+storage.duba.net              	58.83.224.186
+lr.duba.net                   	119.147.146.26
+ut.duba.net                   	221.228.204.46
+wan.duba.net                  	222.28.152.181
+sso.duba.net                  	114.112.68.113
+123.duba.net                  	202.194.19.5, 202.194.19.4
+cf.duba.net                   	183.60.153.100, 183.60.153.99
+mailgate.duba.net             	222.73.9.14
+ct.duba.net                   	119.147.146.89
+images2.duba.net              	222.23.55.208
+xz.duba.net                   	114.112.67.99
+op.duba.net                   	192.168.31.50
+ep.duba.net                   	114.112.68.197
+mx5.duba.net                  	61.136.58.110
+scan.duba.net                 	114.112.68.163, 114.112.68.164
+kid.duba.net                  	101.4.138.61
+120.duba.net                  	114.112.68.112
+img.www.duba.net              	222.28.152.181
+vote.www.duba.net             	61.189.23.175
+img.bbs.duba.net              	222.23.55.208
+feedback.vip.duba.net         	127.0.0.1
+admin.mailgate.duba.net       	222.73.9.14
+ftp.ep.duba.net               	61.182.160.249
+auth.ep.duba.net              	121.14.11.186

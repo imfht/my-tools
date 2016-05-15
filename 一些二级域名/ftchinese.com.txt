@@ -1,0 +1,16 @@
+www.ftchinese.com             	118.143.65.100
+user.ftchinese.com            	118.143.65.100
+mail.ftchinese.com            	118.143.65.106
+home.ftchinese.com            	61.244.110.200
+app.ftchinese.com             	118.143.65.102
+ns1.ftchinese.com             	221.238.251.19
+static.ftchinese.com          	54.250.178.55
+fa.ftchinese.com              	52.77.3.174
+wap.ftchinese.com             	61.244.110.200
+m.ftchinese.com               	118.143.65.105
+www1.ftchinese.com            	118.143.65.108
+www3.ftchinese.com            	118.143.65.102
+cache.ftchinese.com           	118.143.65.107
+ns2.ftchinese.com             	221.238.251.19
+newsletter.ftchinese.com      	118.143.65.105
+dolphin.ftchinese.com         	54.251.12.141

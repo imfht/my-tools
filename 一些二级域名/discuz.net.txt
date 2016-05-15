@@ -1,0 +1,13 @@
+www.discuz.net                	115.25.209.48
+search.discuz.net             	112.64.235.19, 140.206.161.48
+blog.discuz.net               	115.25.209.48
+dev.discuz.net                	10.12.18.100
+games.discuz.net              	59.78.209.142
+pay.discuz.net                	1.1.1.1
+u.discuz.net                  	1.1.1.1
+share.discuz.net              	180.153.3.117
+www7b.discuz.net              	101.227.130.115
+forum.discuz.net              	101.227.130.115
+bbs.discuz.net                	140.206.160.230
+open.discuz.net               	115.25.209.52
+cache.discuz.net              	140.206.160.230

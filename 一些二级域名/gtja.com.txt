@@ -1,0 +1,44 @@
+www.gtja.com                  	218.80.247.173
+i.gtja.com                    	103.250.193.33, 114.141.180.170
+admin.gtja.com                	10.228.213.111
+pay.gtja.com                  	218.80.247.185
+help.gtja.com                 	218.80.247.173
+e.gtja.com                    	180.163.109.1
+ns1.gtja.com                  	114.141.180.138
+shop.gtja.com                 	218.80.247.184
+video.gtja.com                	222.66.232.249
+wap.gtja.com                  	222.66.232.199
+demo.gtja.com                 	222.66.232.199
+pb.gtja.com                   	114.141.180.207
+chat.gtja.com                 	114.141.166.20
+ns7.gtja.com                  	114.141.180.142
+ns8.gtja.com                  	103.250.193.142
+client.gtja.com               	218.80.247.160
+hi.gtja.com                   	58.96.186.226
+site.gtja.com                 	180.163.109.1, 103.250.193.147, 210.13.86.88, 218.80.247.129, 114.141.180.202
+ns4.gtja.com                  	218.17.219.36
+file.gtja.com                 	114.141.180.206
+bj.gtja.com                   	210.77.149.28
+hk.gtja.com                   	218.17.219.45
+et.gtja.com                   	114.141.166.19, 114.141.166.20
+ky.gtja.com                   	114.141.180.152
+ns.gtja.com                   	218.17.219.36
+np.gtja.com                   	114.141.180.64
+sh.gtja.com                   	114.141.180.150
+rss.gtja.com                  	114.141.180.134
+ns3.gtja.com                  	114.141.180.138
+ns5.gtja.com                  	114.141.180.141
+mall.gtja.com                 	218.80.247.184
+jk.gtja.com                   	114.141.180.202
+gz.gtja.com                   	110.79.20.21
+ns6.gtja.com                  	103.250.193.141
+trade.gtja.com                	218.80.247.190
+one.gtja.com                  	114.141.180.84
+xj.gtja.com                   	222.82.225.38
+big5.gtja.com                 	218.80.247.179
+message.gtja.com              	114.141.166.23
+yn.gtja.com                   	112.117.211.25
+wap2.gtja.com                 	218.80.247.152
+wap1.gtja.com                 	218.80.247.151
+vip.bj.gtja.com               	211.99.203.85
+zhidao.bj.gtja.com            	211.99.203.85
