@@ -1,17 +1,37 @@
+#!/usr/bin/env python
+#coding:utf-8
+"""
+  Author:  fiht --<fiht@qq.com>
+  Purpose: 查找subDomain
+  Created: 2016年06月16日
+"""
 import requests
 from bs4 import BeautifulSoup
 import time
-import queue
+try:
+    from queue import Queue
+except:
+    from Queue import Queue
 import threading
+from termcolor import colored
 import os
 import sys
 from optparse import OptionParser
+banner = '''\
+| |__   ___| | | ___   \ \      / /__  _ __| | __| |
+| '_ \ / _ \ | |/ _ \   \ \ /\ / / _ \| '__| |/ _` |
+| | | |  __/ | | (_) |   \ V  V / (_) | |  | | (_| |
+|_| |_|\___|_|_|\___/     \_/\_/ \___/|_|  |_|\__,_|
+
+Usage: python get_subDomain filename 
+the result will save as {filename}_subDomains
+'''
 #----------------------------------------------------------------------
 """return None 有点问题,但是不想折腾了"""
 def get_subDomain(url):
     """返回子域名list"""
     try:
-        req =requests.post('http://i.links.cn/subdomain/',data='domain=%s&b2=1&b3=1&b4=1'%url,headers={'Content-Type': 'application/x-www-form-urlencoded'},timeout=10)
+        req =requests.post('http://i.links.cn/subdomain/',data='domain=%s&b2=1&b3=0&b4=0'%url,headers={'Content-Type': 'application/x-www-form-urlencoded'},timeout=10)
     except Exception as e:
         print(e)
         return None
@@ -22,9 +42,8 @@ def get_subDomain(url):
         return return_value
     for i in sub_domains:
         return_value.append(i.string)
-    print(url,'寻找完毕')
     return return_value
-que = queue.Queue()
+que = Queue()
 target = ''
 #----------------------------------------------------------------------
 def run_thread():
@@ -33,18 +52,19 @@ def run_thread():
         url = que.get()
         sub_domains = get_subDomain(url)
         if not sub_domains: # 返回None
-            print('%url 返回了个空,我也不知道为什么,也不愿意给你解决')
+            print('[-]%s 获取超时,重新推回队列'%url)
+            que.put(url)
         else:
+            print(colored('[+] %s寻找完毕'%url,'green'))
             for i in sub_domains:
-                print(i,file=target)
+                target.writelines(i+'\n')
 #----------------------------------------------------------------------
 if __name__=='__main__':
     """"""
     parser = OptionParser()
-    print("介绍:python3 get_subDomain 文件路径")
-    print('然后程序就会给你找出 文件中所有域名的子域名 并保存为文件名_subDomains')
+    print(banner)
     if len(sys.argv) < 2:
-        print('请输入文件名')
+        print(colored('[ERROR] Please input a filename!','red'))
         sys.exit(0)
     an_loney_list = []
     target = open(sys.argv[1]+'_subDomain','w+')
@@ -53,9 +73,7 @@ if __name__=='__main__':
             i = i.strip('\n')
             if i not in an_loney_list: # 主要是去重
                 an_loney_list.append(i)
-                #print(i)
             else:
-                #print('发现一个重复的->',i)
                 pass
     for i in an_loney_list:
         que.put(i)
@@ -63,3 +81,4 @@ if __name__=='__main__':
     for i in threads:
         i.start()
         i.join()
+
