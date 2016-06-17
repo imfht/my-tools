@@ -31,7 +31,7 @@ the result will save as {filename}_subDomains
 def get_subDomain(url):
     """返回子域名list"""
     try:
-        req =requests.post('http://i.links.cn/subdomain/',data='domain=%s&b2=1&b3=0&b4=0'%url,headers={'Content-Type': 'application/x-www-form-urlencoded'},timeout=10)
+        req =requests.post('http://i.links.cn/subdomain/',data='domain=%s&b2=1&b3=1&b4=1'%url,headers={'Content-Type': 'application/x-www-form-urlencoded'},timeout=10)
     except Exception as e:
         print(e)
         return None
@@ -77,7 +77,7 @@ if __name__=='__main__':
                 pass
     for i in an_loney_list:
         que.put(i)
-    threads = [threading.Thread(target=run_thread) for i in range(0,100)]
+    threads = [threading.Thread(target=run_thread) for i in range(0,50)]
     for i in threads:
         i.start()
         i.join()
