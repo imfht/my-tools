@@ -85,17 +85,20 @@ if __name__ == '__main__':
     parser.add_option('-n', '--netmask', default='24', help='子网数量')
     parser.add_option('-p', '--port', default='80', help='指定端口')
     parser.add_option('-f', '--file', help='将结果写入文件')
+    parser.add_option('--no-title',dest='no_title',action='store_true',default=False,help='只输出端口开放的ip')
     (options, args) = parser.parse_args()
     if not args:
         parser.print_usage()
+    elif options.no_title:
+        results = Util.get_ip_by_netmask(args[0], options.port, options.netmask).values()
     else:
         results = Util.run(args[0], options.port, options.netmask)
-        print('报告小主，找到了 %s 个目标' % len(results))
-        if options.file:
-            f = open(options.file,'a+')
-        else:
-            import sys
-            f = sys.stdout
-        for i in results:
-            print(i,file=f)
-            #    print (Util.get_ip_by_netmask('202.194.14.1','80',28)) --> success
+    print('报告小主，找到了 %s 个目标' % len(results))
+    if options.file:
+        f = open(options.file,'a+')
+    else:
+        import sys
+        f = sys.stdout
+    for i in results:
+        print(i,file=f)
+        #    print (Util.get_ip_by_netmask('202.194.14.1','80',28)) --> success
