@@ -1,11 +1,12 @@
 # encoding:utf-8
+import json
 import re
 from optparse import OptionParser
 
 import nmap
 import requests
 from loggerutil import logger_util
-import json
+
 
 ########################################################################
 class Util:
@@ -64,32 +65,36 @@ class Util:
         will return:
             ['http://1.1.1.1:8080/','http://2.2.2.2:8080/']
         '''
-        return ['%s://%s:%s' % (scheme,i,port) for i in iplist]
+        return ['%s://%s:%s' % (scheme, i, port) for i in iplist]
+
     @staticmethod
     def run(ip, port, netmask):
-        hosts = Util.get_ip_by_netmask(ip, port, netmask).keys() # @todo 接收这个函数返回的banner信息
-        titles = Util.get_title_by_url(Util.url_maker(hosts,port,'http'))
+        hosts = Util.get_ip_by_netmask(ip, port, netmask).keys()  # @todo 接收这个函数返回的banner信息
+        titles = Util.get_title_by_url(Util.url_maker(hosts, port, 'http'))
         return titles
+
+
 ########################################################################
 if __name__ == '__main__':
     parser = OptionParser()
-    parser.usage='''
+    parser.usage = '''
         example: python NetMaskScanner_demo.py -p 8080 -n 24 202.194.14.166
     '''
     parser.add_option('-n', '--netmask', default='24', help='子网数量')
     parser.add_option('-p', '--port', default='80', help='指定端口')
-    parser.add_option('-f','--file',help='将结果写入文件')
+    parser.add_option('-f', '--file', help='将结果写入文件')
     (options, args) = parser.parse_args()
     if not args:
         parser.print_usage()
     else:
-        results = Util.run(args[0], options.netmask, options.port)
+        results = Util.run(args[0], options.port, options.netmask)
         print('报告小主，找到了 %s 个目标' % len(results))
         if options.file:
-            with open(options.file,'w+') as f:
+            with open(options.file, 'w+') as f:
 
-                json.dump(results,f,ensure_ascii=False)
+                json.dump(results, f, ensure_ascii=False)
         else:
             import sys
-            json.dump(results,fp=sys.stdout,ensure_ascii=False)
-    #    print (Util.get_ip_by_netmask('202.194.14.1','80',28)) --> success
+
+            json.dump(results, fp=sys.stdout, ensure_ascii=False)
+            #    print (Util.get_ip_by_netmask('202.194.14.1','80',28)) --> success
