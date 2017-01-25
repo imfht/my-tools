@@ -1,4 +1,5 @@
 # encoding:utf-8
+from __future__ import print_function
 import json
 import re
 from optparse import OptionParser
@@ -91,11 +92,10 @@ if __name__ == '__main__':
         results = Util.run(args[0], options.port, options.netmask)
         print('报告小主，找到了 %s 个目标' % len(results))
         if options.file:
-            with open(options.file, 'w+') as f:
-
-                json.dump(results, f, ensure_ascii=False)
+            f = open(options.file,'a+')
         else:
             import sys
-
-            json.dump(results, fp=sys.stdout, ensure_ascii=False)
+            f = sys.stdout
+        for i in results:
+            print(i,file=f)
             #    print (Util.get_ip_by_netmask('202.194.14.1','80',28)) --> success
