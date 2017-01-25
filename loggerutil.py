@@ -7,10 +7,10 @@ class logger_util():
     def get_formatter():
         """get_logger"""
         logger = logging.getLogger(name='UtilLogger')
-        logger.setLevel(logging.DEBUG)
+        logger.setLevel(logging.ERROR)
         formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
         ch = logging.StreamHandler()
-        ch.setLevel(logging.DEBUG)
+        ch.setLevel(logging.ERROR)
         ch.setFormatter(formatter)
         logger.addHandler(ch)
         return logger
