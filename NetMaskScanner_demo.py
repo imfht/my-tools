@@ -36,9 +36,10 @@ class Util:
         """return {url:title}, if title do not find we return{url:None}"""
         try:
             raw_http = requests.get(url, timeout=timeout)
+            raw_http.encoding = raw_http.apparent_encoding
         except requests.ConnectionError or requests.ConnectTimeout:
             logger_util.log_warning('Connect failed to %s ' % url)
-            return None
+            return
         title = re.findall(pattern, raw_http.text)
         if not title:
             logger_util.log_debug('This page do not have title %s' % url)
