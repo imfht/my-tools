@@ -3,7 +3,7 @@ from __future__ import print_function
 import json
 import re
 from optparse import OptionParser
-
+import sys
 import nmap
 import requests
 from loggerutil import logger_util
@@ -89,15 +89,16 @@ if __name__ == '__main__':
     (options, args) = parser.parse_args()
     if not args:
         parser.print_usage()
+        sys.exit(0)
     elif options.no_title:
-        results = Util.get_ip_by_netmask(args[0], options.port, options.netmask).values()
+        results = Util.get_ip_by_netmask(args[0], port=options.port, netmask=options.netmask)
+        print(results)
     else:
         results = Util.run(args[0], options.port, options.netmask)
     print('报告小主，找到了 %s 个目标' % len(results))
     if options.file:
         f = open(options.file,'a+')
     else:
-        import sys
         f = sys.stdout
     for i in results:
         print(i,file=f)
