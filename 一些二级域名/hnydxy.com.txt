@@ -1,3 +1,0 @@
-www.hnydxy.com                	222.240.201.137
-app.hnydxy.com                	222.240.201.138
-v.hnydxy.com                  	222.240.201.130

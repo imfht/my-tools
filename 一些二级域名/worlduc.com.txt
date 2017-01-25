@@ -1,5 +1,0 @@
-www.worlduc.com               	119.90.41.30
-app.worlduc.com               	119.90.41.21
-mail.worlduc.com              	119.90.40.240
-group.worlduc.com             	119.90.41.40
-im.worlduc.com                	119.90.41.44

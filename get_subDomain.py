@@ -7,14 +7,12 @@
 """
 import requests
 from bs4 import BeautifulSoup
-import time
 try:
     from queue import Queue
 except:
     from Queue import Queue
 import threading
 from termcolor import colored
-import os
 import sys
 from optparse import OptionParser
 banner = '''\
@@ -23,7 +21,7 @@ banner = '''\
 | | | |  __/ | | (_) |   \ V  V / (_) | |  | | (_| |
 |_| |_|\___|_|_|\___/     \_/\_/ \___/|_|  |_|\__,_|
 
-Usage: python get_subDomain filename 
+Usage: python get_subDomain filename
 the result will save as {filename}_subDomains
 '''
 #----------------------------------------------------------------------

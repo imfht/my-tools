@@ -1,3 +1,0 @@
-www.phpcms.cn                 	122.11.32.111
-bbs.phpcms.cn                 	122.11.32.109
-tuan.phpcms.cn                	122.11.32.111
