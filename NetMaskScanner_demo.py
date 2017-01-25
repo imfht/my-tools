@@ -38,7 +38,7 @@ class Util:
             raw_http = requests.get(url, timeout=timeout)
             raw_http.encoding = raw_http.apparent_encoding
         except requests.ConnectionError or requests.ConnectTimeout:
-            logger_util.log_warning('Connect failed to %s ' % url)
+            logger_util.log_debug('Connect failed to %s ' % url)
             return
         title = re.findall(pattern, raw_http.text)
         if not title:
@@ -56,7 +56,7 @@ class Util:
         things = pool.map(Util.get_title_by_url, urllist)  # @todo need add timeout and pattern to finish the frame
         pool.close()
         pool.join()
-        return things
+        return [i for i in things if i]
 
     @staticmethod
     def url_maker(iplist, port, scheme):
