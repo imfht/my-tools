@@ -91,7 +91,8 @@ if __name__ == '__main__':
         parser.print_usage()
         sys.exit(0)
     elif options.no_title:
-        results = Util.get_ip_by_netmask(args[0], port=options.port, netmask=options.netmask)
+        results = Util.get_ip_by_netmask(args[0], port=options.port, netmask=options.netmask).keys()
+        results = Util.url_maker(results,port=options.port,scheme='http')
         print(results)
     else:
         results = Util.run(args[0], options.port, options.netmask)
