@@ -70,7 +70,7 @@ class Util:
     @staticmethod
     def run(ip, port, netmask):
         hosts = Util.get_ip_by_netmask(ip, port, netmask).keys()  # @todo 接收这个函数返回的banner信息
-        titles = Util.get_title_by_url(Util.url_maker(hosts, port, 'http'))
+        titles = Util.multi_thread_get_title_by_url(Util.url_maker(hosts, port, 'http'))
         return titles
 
 
